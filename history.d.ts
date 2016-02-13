@@ -26,40 +26,40 @@ declare module otherHistory {
 		createHref(location: LocationDescriptor): Href;
 	}
 
-	type HistoryOptions = {
+	interface HistoryOptions {
 		getUserConfirmation?(message: string, callback: (boolean) => void): void;
 	}
 
-	type BeforeUnload = {
+	interface BeforeUnload {
 		listenBeforeUnload?(callBack: () => string | boolean | void): void;
 	}
 
-	type QueryOptions = {
+	interface QueryOptions {
 		parseQueryString?(queryString: string): any;
 		stringifyQuery?(query: Object): string;
 	}
 
-	type BasenameOptions = {
+	interface BasenameOptions {
 		basename?: string;
 	}
 
 	type Href = string;
 
-	type Location = {
+	interface Location{
 		pathname?: Pathname;
 		search?: Search;
 		query?: Query;
 		state?: LocationState;
 		action?: Action;
 		key?: LocationKey;
-	};
+	}
 
-	type LocationDescriptorObject = {
+	interface LocationDescriptorObject{
 		pathname?: Pathname;
 		search?: Search;
 		query?: Query;
 		state?: LocationState;
-	};
+	}
 
 	type LocationDescriptor = LocationDescriptorObject | Path;
 
