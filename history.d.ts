@@ -28,6 +28,7 @@ declare module otherHistory {
 
 	interface HistoryOptions {
 		getUserConfirmation?(message: string, callback: (confirmed: boolean) => void): void;
+		queryKey: boolean;
 	}
 
 	interface BeforeUnload {
@@ -90,7 +91,7 @@ declare module otherHistory {
 	export function useBeforeUnload<TArguments, TResult extends History>(createHistory: CreateHistory<TArguments, TResult>): CreateHistory<TArguments, TResult & BeforeUnload>;
 
 	export function useQueries<TArguments, TResult extends History>(createHistory: CreateHistory<TArguments, TResult>): CreateHistory<TArguments & QueryOptions, TResult>;
-	
+
 	export function useBasename<TArguments, TResult extends History>(createHistory: CreateHistory<TArguments, TResult>): CreateHistory<TArguments & BasenameOptions, TResult>;
 
 }
