@@ -28,7 +28,7 @@ declare module otherHistory {
 
 	interface HistoryOptions {
 		getUserConfirmation?(message: string, callback: (confirmed: boolean) => void): void;
-		queryKey: boolean;
+		queryKey?: boolean;
 	}
 
 	interface BeforeUnload {
