@@ -1,0 +1,16 @@
+{
+  "name": "typings-history",
+  "version": "0.0.0",
+  "description": "A type definition for the minimal functionx history library.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-w-ross/typings-history.git"
+  },
+  "scripts": {
+    "test": "tsc test.ts"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
+}
