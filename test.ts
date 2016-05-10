@@ -1,4 +1,4 @@
-import {createHistory, createLocation, useBeforeUnload, useQueries, useBasename} from "./history";
+import {createHistory, createHashHistory, createLocation, useBeforeUnload, useQueries, useBasename} from "./history";
 
 /** Getting Started */
 () => {
@@ -96,4 +96,9 @@ import {createHistory, createLocation, useBeforeUnload, useQueries, useBasename}
 	let history = useBasename(createHistory)({
 		basename: '/base'
 	});
+}
+
+/** Hash History */
+() => {
+	createHashHistory({ queryKey: '_some' })
 }
