@@ -44,7 +44,6 @@ import {createHistory, createHashHistory, createLocation, useBeforeUnload, useQu
 
 /** Location */
 () => {
-
 	let history = createHistory();
 	const location = createLocation('/a/path?a=query', { the: 'state' })
 	// Alternatively, you can use a history object's createLocation method:
@@ -69,7 +68,6 @@ import {createHistory, createHashHistory, createLocation, useBeforeUnload, useQu
 			callback(window.confirm(message)) // The default behavior
 		}
 	});
-
 }
 
 () => {
