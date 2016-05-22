@@ -24,6 +24,7 @@ declare module otherHistory {
 		createLocation: CreateLocation;
 		createPath(location: LocationDescriptor): Path;
 		createHref(location: LocationDescriptor): Href;
+		getCurrentLocation(): string;
 	}
 
 	interface HistoryOptions {
